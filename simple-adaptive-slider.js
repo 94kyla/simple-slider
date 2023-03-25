@@ -110,7 +110,7 @@ class ItcSimpleSlider {
     // назначаем обработчики
     this._addEventListener();
     // запускаем автоматическую смену слайдов
-    this._autoplay();
+//     this._autoplay();
   }
 
   _changeActiveItems() {
@@ -314,7 +314,7 @@ class ItcSimpleSlider {
         this._move();
       }
       this._hasSwipeState = false;
-      this._autoplay();
+//       this._autoplay();
     };
     // click
     this._el.addEventListener('click', (e) => {
@@ -329,7 +329,7 @@ class ItcSimpleSlider {
         const index = parseInt($target.dataset.slideTo, 10);
         this._moveTo(index);
       }
-      this._autoplay();
+//       this._autoplay();
     });
 
     // transitionstart and transitionend
@@ -343,7 +343,7 @@ class ItcSimpleSlider {
       this._autoplay('stop');
     });
     this._el.addEventListener('mouseleave', () => {
-      this._autoplay();
+//       this._autoplay();
     });
     // swipe
     if (this._config.swipe) {
@@ -376,7 +376,7 @@ class ItcSimpleSlider {
         this._clientRect = contentRect;
         const newValueX = contentRect.width * Number(this._elItems.dataset.translate);
         this.reset(newValueX, true);
-        this._autoplay();
+//         this._autoplay();
       });
       resizeObserver.observe(this._elWrapper);
     }
@@ -420,7 +420,7 @@ class ItcSimpleSlider {
       // помечаем активные элементы
       this._changeActiveItems();
     }
-    this._autoplay();
+//     this._autoplay();
   }
 
   // перейти к следующему слайду
