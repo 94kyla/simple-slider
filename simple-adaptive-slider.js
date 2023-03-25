@@ -141,7 +141,7 @@ class ItcSimpleSlider {
       const isNotMovePrev = this._states[0] && this._direction === 'prev';
       const isNotMoveNext = this._states[this._states.length - 1] && this._direction === 'next';
       if (isNotMovePrev || isNotMoveNext) {
-        this._autoplay('stop');
+//         this._autoplay('stop');
         return;
       }
     }
@@ -362,7 +362,7 @@ class ItcSimpleSlider {
     // при изменении активности вкладки
     document.addEventListener('visibilitychange', () => {
       if (document.visibilityState === 'visible' && this._config.loop) {
-        this._autoplay();
+//         this._autoplay();
       } else {
         this._autoplay('stop');
       }
